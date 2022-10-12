@@ -1,0 +1,23 @@
+server:
+  port: "${SERVER_PORT:8080}"
+
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
+
+    driver-class-name: org.postgresql.Driver
+    username: "${SPRING_DATA_SOURCE_USERNAME:postgres}"
+    password: "${SPRING_DATA_SOURCE_PASSWORD:postgres}"
+    url: "${SPRING_DATA_SOURCE_URL:jdbc:postgresql://localhost:5432/postgres}"
+
+  jpa:
+    hibernate:
+      ddl-auto: "${SPRING_JPA_HIBERNATE_DDL_AUTO:update}"
+
+  mvc:
+    format:
+      date-time: iso
+
+initialization_mode: "${INITIALIZATION_MODE:false}"

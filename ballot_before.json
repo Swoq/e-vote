@@ -1,0 +1,7 @@
+{
+  "candidates": {
+    "candidate1": true,
+    "candidate2": false,
+    "candidate3": false
+  }
+}
